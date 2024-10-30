@@ -516,7 +516,7 @@ class Task(object):
     @property
     def description(self):
         if self.__doc__:
-            return re.split("\.\s+", self.__doc__, maxsplit=1)[0].strip()
+            return re.split(r"\.\s+", self.__doc__, maxsplit=1)[0].strip()
         else:
             return ""
 
